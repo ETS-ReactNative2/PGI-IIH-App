@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import LaunchScreen from './components/launch_screen/LaunchScreen';
 
 export default function App() {

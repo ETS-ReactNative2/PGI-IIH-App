@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 import LaunchScreenButton from "./LaunchScreenButton";
 
@@ -42,8 +42,7 @@ const styles = StyleSheet.create({
     textContainer: {
         alignItems: 'center',
         justifyContent: "flex-end",
-        marginVertical: Dimensions.get('window').height * 0.025,
-        // marginBottom: Dimensions.get('window').height * 0.03
+        marginVertical: Dimensions.get('window').height * 0.025
     }
 })
 

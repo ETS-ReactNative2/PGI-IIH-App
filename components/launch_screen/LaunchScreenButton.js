@@ -1,4 +1,3 @@
-<script src="http://localhost:8097"></script>
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -17,7 +16,7 @@ const LaunchScreenButton = props => {
                 end={{ x: 0, y: 0 }} //here we can define axis but as end position
                 colors={['#1DDE7D', '#72DFC5']}
                 style={styles.button}>
-                <Text style={styles.text}>Get Started <AntDesign style={{ marginTop: 5 }} name="arrowright" size={19} color="white" /> </Text>
+                <Text style={styles.text}>Get Started <AntDesign name="arrowright" size={19} color="white" /> </Text>
             </LinearGradient>
         </TouchableOpacity >
     )
