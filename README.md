@@ -30,3 +30,13 @@ npm install
 ```javascript
 npm start
 ```
+
+## FAQ
+
+#### Q. How to use react-devtools in react native?
+
+Ans. Refer [react-native-how-to-inspect-the-ui-elements](https://stackoverflow.com/questions/36638245/react-native-how-to-inspect-the-ui-elements)
+
+#### Q. How to toggle inspect in IOS Simulator?
+
+Ans. To toggle inspect on iOS simulator - CMD + Ctrl + Z -> Show Inspector
