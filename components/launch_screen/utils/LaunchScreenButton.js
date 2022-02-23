@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import React from "react";
+import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -8,7 +8,7 @@ const LaunchScreenButton = props => {
     return (
         <TouchableOpacity
             activeOpacity={0.8}
-            onPress={() => { }}
+            onPress={props.onPress}
             style={styles.buttonContainer}
         >
             <LinearGradient

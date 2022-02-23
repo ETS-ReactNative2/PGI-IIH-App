@@ -1,8 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
-import LaunchScreenButton from "./LaunchScreenButton";
+import { StatusBar } from 'expo-status-bar';
+import LaunchScreenButton from "./utils/LaunchScreenButton";
+
 
 const LaunchScreen = props => {
+
+    const GetStartedHandler = () => {
+        props.navigation.navigate({
+            name: "ChooseProfession"
+        })
+    }
 
     return (
         <View style={styles.screen}>
@@ -10,12 +18,13 @@ const LaunchScreen = props => {
                 <Image source={require('../../assets/launch-screen-animation.gif')} style={styles.image} resizeMode="cover" />
             </View>
             <View style={styles.buttonContainer}>
-                <LaunchScreenButton />
+                <LaunchScreenButton onPress={GetStartedHandler} />
             </View>
             <View style={styles.textContainer}>
                 <Text style={styles.copyrightText}>@copyright PGIMER</Text>
                 <Text style={styles.copyrightText}>Chandigarh, India</Text>
             </View>
+            <StatusBar style="auto" />
         </View>
     )
 }
@@ -37,7 +46,10 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height * 0.63
     },
     screen: {
-        flex: 1
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     textContainer: {
         alignItems: 'center',
