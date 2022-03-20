@@ -1,34 +1,28 @@
 import React, { useState } from 'react';
-import LinearGradientText from './utils/LinearGradientText';
+import LinearGradientText from './LinearGradientText';
 import { StyleSheet, View, Text, TextInput } from 'react-native';
-import CustomButton from './utils/CustomButton';
-import RegisterStepTwo from './utils/RegisterStepTwo';
-import RegisterStepThree from './utils/RegisterStepThree';
+import CustomButton from './CustomButton';
+import SelectDropDown from 'react-native-select-dropdown';
 
-const Register = props => {
+const RegisterStepTwo = props => {
     
     const [stepNumber, setStepNumber] = useState(1);
 
     return (
         <View style={styles.screen}>
             <LinearGradientText  style={styles.text} colors={['#1DDE7D', '#72DFC5']}>
-            Register (1/3)
+            Register (3/3)
             </LinearGradientText>
-            <Text style={{paddingVertical: 3, fontFamily: 'open-sans-bold', color:'#C0C0C0', fontSize:22}}>Fill in the details to get started</Text>
-            <View style={styles.inputContainer}>
-                <View style={{marginVertical: 6}}><TextInput style={styles.textInput} placeholder='Name' placeholderTextColor = "grey"/></View>
-                <View style={{marginVertical: 6}}><TextInput style={styles.textInput} placeholder='Username' placeholderTextColor = "grey"/></View>
-                <View style={{marginVertical: 6}}><TextInput style={styles.textInput} placeholder='Phone Number' placeholderTextColor = "grey"/></View>
-                <View style={{marginVertical: 6}}><TextInput style={styles.textInput} secureTextEntry={true} placeholder='Password' placeholderTextColor = "grey"/></View>
+            <Text style={{paddingVertical: 3, fontFamily: 'open-sans-bold', color:'#C0C0C0', fontSize:22}}>Almost there</Text>
+            <View style={{flexDirection: 'row', marginTop: 260, justifyContent: 'space-between', alignItems: 'center'}}>
+                <Text style={{fontFamily: 'open-sans-bold', color:'#C0C0C0', fontSize:16}}>Back</Text>
+                <CustomButton style={styles.button} text="REGISTER"/>
             </View>
-            <CustomButton style={styles.button} text="NEXT"/>
             <View style={styles.footer}>
                 <Text style={{fontFamily: 'open-sans-bold', color:'#C0C0C0', fontSize:14}}>Already registered?</Text>
                 <LinearGradientText style={{fontFamily: 'open-sans-bold', fontSize:14}} colors={['#1DDE7D', '#72DFC5']}> Login here</LinearGradientText>
             </View>
         </View>
-        // <RegisterStepTwo/>
-        // <RegisterStepThree/>
     );
 }
 
@@ -61,11 +55,9 @@ const styles = StyleSheet.create({
         marginTop: 40
     },
     button: {
-        width: '27%',
-        height: '12%',
-        marginLeft: '72%',
-        marginTop: 15
+        width: 120,
+        height: 50,
     },
 });
 
-export default Register;
+export default RegisterStepTwo;
