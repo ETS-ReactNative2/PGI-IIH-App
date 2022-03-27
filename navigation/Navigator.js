@@ -7,7 +7,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import LaunchScreen from '../components/launch_screen/LaunchScreen';
 import ChooseProfessionScreen from '../components/launch_screen/ChooseProfessionScreen';
 import Login from '../components/login/login';
-import Register from '../components/login/register';
+import Register_1 from '../components/login/register_1';
+import Register_2 from '../components/login/register_2';
+import Register_3 from '../components/login/register_3';
+import Main from '../components/main/main';
 
 const GetStartedNavigator = createStackNavigator();
 
@@ -27,7 +30,19 @@ const StartNavigator = () => (
         />
         <GetStartedNavigator.Screen
             name="Register"
-            component={Register}
+            component={Register_1}
+        />
+        <GetStartedNavigator.Screen
+            name="Register_2"
+            component={Register_2}
+        />
+        <GetStartedNavigator.Screen
+            name="Register_3"
+            component={Register_3}
+        />
+        <GetStartedNavigator.Screen
+            name="Main"
+            component={Main}
         />
     </GetStartedNavigator.Navigator>
 );

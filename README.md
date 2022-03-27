@@ -40,3 +40,17 @@ Ans. Refer [react-native-how-to-inspect-the-ui-elements](https://stackoverflow.c
 #### Q. How to toggle inspect in IOS Simulator?
 
 Ans. To toggle inspect on iOS simulator - CMD + Ctrl + Z -> Show Inspector
+
+#### Q. How to use TouchableWithoutFeedback to avoid any issues in android?
+
+Ans. You must put something into it to make it work, just put a <View> and wrap your JSX into the view is the first step, the next is making the view flex=1
+
+```javascript
+<TouchableWithoutFeedback>
+    <View style={{flex:1}}>
+         ... your actual JSX
+    </View>
+</TouchableWithoutFeedback>
+```
+
+for more info, refer [Github Issues](https://github.com/facebook/react-native/issues/10180)

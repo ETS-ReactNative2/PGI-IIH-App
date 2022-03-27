@@ -2,7 +2,6 @@ import React from "react";
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { AntDesign } from '@expo/vector-icons';
-import { View } from "react-native-web";
 
 const CustomButton = props => {
 
@@ -18,7 +17,7 @@ const CustomButton = props => {
                 colors={['#1DDE7D', '#72DFC5']}
                 style={styles.button}>
 
-                <Text style={styles.text}>{props.text}</Text>
+                <Text style={styles.text}>{props.text} </Text>
                 <AntDesign name="arrowright" size={15} color="white" />
 
             </LinearGradient>
@@ -28,11 +27,11 @@ const CustomButton = props => {
 
 const styles = StyleSheet.create({
     button: {
-        height: '100%',
-        width: '100%',
-        borderRadius: 50,
+        height: 50,
+        width: 100,
+        borderRadius: 25,
         flexDirection: 'row',
-        justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
         paddingHorizontal: 15
     },
