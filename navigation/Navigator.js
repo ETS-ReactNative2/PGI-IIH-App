@@ -15,39 +15,48 @@ import HomePageScreen from '../components/landing_screen/HomePageScreen';
 import RemindersScreen from '../components/landing_screen/RemindersScreen';
 import NotificationsScreen from '../components/landing_screen/NotificationsScreen';
 import ProfileScreen from '../components/landing_screen/ProfileScreen';
-
+import NutritionScreen from '../components/landing_screen/NutritionScreen';
 
 const GetStartedNavigator = createStackNavigator();
 
-const StartNavigator = () => (
-    <GetStartedNavigator.Navigator screenOptions={{ headerShown: false }}>
+// const StartNavigator = () => (                      // main navigator
+//     <GetStartedNavigator.Navigator screenOptions={{ headerShown: false }}>
+//         <GetStartedNavigator.Screen
+//             name="GetStarted"
+//             component={LaunchScreen}
+//         />
+//         <GetStartedNavigator.Screen
+//             name="ChooseProfession"
+//             component={ChooseProfessionScreen}
+//         />
+//         <GetStartedNavigator.Screen
+//             name="Login"
+//             component={Login}
+//         />
+//         <GetStartedNavigator.Screen
+//             name="Register"
+//             component={Register_1}
+//         />
+//         <GetStartedNavigator.Screen
+//             name="Register_2"
+//             component={Register_2}
+//         />
+//         <GetStartedNavigator.Screen
+//             name="Register_3"
+//             component={Register_3}
+//         />
+//         <GetStartedNavigator.Screen
+//             name="Main"
+//             component={Main}
+//         />
+//     </GetStartedNavigator.Navigator>
+// );
+
+const StartNavigator = () => (           // nutrition page
+    <GetStartedNavigator.Navigator>
         <GetStartedNavigator.Screen
-            name="GetStarted"
-            component={LaunchScreen}
-        />
-        <GetStartedNavigator.Screen
-            name="ChooseProfession"
-            component={ChooseProfessionScreen}
-        />
-        <GetStartedNavigator.Screen
-            name="Login"
-            component={Login}
-        />
-        <GetStartedNavigator.Screen
-            name="Register"
-            component={Register_1}
-        />
-        <GetStartedNavigator.Screen
-            name="Register_2"
-            component={Register_2}
-        />
-        <GetStartedNavigator.Screen
-            name="Register_3"
-            component={Register_3}
-        />
-        <GetStartedNavigator.Screen
-            name="Main"
-            component={Main}
+            name="Nutrition"
+            component={NutritionScreen}
         />
     </GetStartedNavigator.Navigator>
 );
@@ -84,16 +93,16 @@ const MyDrawer = () => {
     );
 }
 
-// const AppNavigator = () => (
-//     <NavigationContainer>
-//         <StartNavigator/>
-//     </NavigationContainer>
-// );
-
 const AppNavigator = () => (
     <NavigationContainer>
-        <TabsNav/>
+        <StartNavigator/>
     </NavigationContainer>
 );
+
+// const AppNavigator = () => (        // after login navigator
+//     <NavigationContainer>
+//         <TabsNav/>
+//     </NavigationContainer>
+// );
 
 export default AppNavigator;
