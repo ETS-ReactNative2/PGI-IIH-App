@@ -19,47 +19,47 @@ import NutritionScreen from '../components/landing_screen/NutritionScreen';
 
 const GetStartedNavigator = createStackNavigator();
 
-// const StartNavigator = () => (                      // main navigator
-//     <GetStartedNavigator.Navigator screenOptions={{ headerShown: false }}>
-//         <GetStartedNavigator.Screen
-//             name="GetStarted"
-//             component={LaunchScreen}
-//         />
-//         <GetStartedNavigator.Screen
-//             name="ChooseProfession"
-//             component={ChooseProfessionScreen}
-//         />
-//         <GetStartedNavigator.Screen
-//             name="Login"
-//             component={Login}
-//         />
-//         <GetStartedNavigator.Screen
-//             name="Register"
-//             component={Register_1}
-//         />
-//         <GetStartedNavigator.Screen
-//             name="Register_2"
-//             component={Register_2}
-//         />
-//         <GetStartedNavigator.Screen
-//             name="Register_3"
-//             component={Register_3}
-//         />
-//         <GetStartedNavigator.Screen
-//             name="Main"
-//             component={Main}
-//         />
-//     </GetStartedNavigator.Navigator>
-// );
-
-const StartNavigator = () => (           // nutrition page
-    <GetStartedNavigator.Navigator>
+const StartNavigator = () => (                      // main navigator
+    <GetStartedNavigator.Navigator screenOptions={{ headerShown: false }}>
         <GetStartedNavigator.Screen
-            name="Nutrition"
-            component={NutritionScreen}
+            name="GetStarted"
+            component={LaunchScreen}
+        />
+        <GetStartedNavigator.Screen
+            name="ChooseProfession"
+            component={ChooseProfessionScreen}
+        />
+        <GetStartedNavigator.Screen
+            name="Login"
+            component={Login}
+        />
+        <GetStartedNavigator.Screen
+            name="Register"
+            component={Register_1}
+        />
+        <GetStartedNavigator.Screen
+            name="Register_2"
+            component={Register_2}
+        />
+        <GetStartedNavigator.Screen
+            name="Register_3"
+            component={Register_3}
+        />
+        <GetStartedNavigator.Screen
+            name="Main"
+            component={Main}
         />
     </GetStartedNavigator.Navigator>
 );
+
+// const StartNavigator = () => (           // nutrition page
+//     <GetStartedNavigator.Navigator>
+//         <GetStartedNavigator.Screen
+//             name="Nutrition"
+//             component={NutritionScreen}
+//         />
+//     </GetStartedNavigator.Navigator>
+// );
 
 const Tab = createBottomTabNavigator();
 
@@ -86,23 +86,23 @@ const MyDrawer = () => {
         // screenOptions: https://stackoverflow.com/questions/68713977/how-to-make-drawercontentoptions-work-in-react-navigation-6-x
         <Drawer.Navigator
         screenOptions={{
-            headerTitleShown:false
+            headerShown: false
         }}>
         <Drawer.Screen name="App" component={HomePageScreen} />
         </Drawer.Navigator>
     );
 }
 
-const AppNavigator = () => (
-    <NavigationContainer>
-        <StartNavigator/>
-    </NavigationContainer>
-);
-
-// const AppNavigator = () => (        // after login navigator
+// const AppNavigator = () => (
 //     <NavigationContainer>
-//         <TabsNav/>
+//         <StartNavigator/>
 //     </NavigationContainer>
 // );
+
+const AppNavigator = () => (        // after login navigator
+    <NavigationContainer>
+        <TabsNav/>
+    </NavigationContainer>
+);
 
 export default AppNavigator;

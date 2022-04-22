@@ -1,11 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Button } from 'react-native';
 import style from "react-native-datepicker/style";
 
 const HomePageScreen = (props) => {
     return (
         <View style={styles.screen}>
             <Text>home page</Text>
+            <Button title="open drawer" onPress={() => props.navigation.openDrawer()}/>
         </View>
     );
 };
