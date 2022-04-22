@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet,TouchableWithoutFeedback } from 'react-native';
+import { Text, View, StyleSheet, TouchableWithoutFeedback } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 const NotificationsScreen = (props) => {
-    const [notificationsList,setNotificationsList] = useState([
-        {id: 1, title: "Message from doctor", message: "try to avoiddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd milk"},
-        {id: 2, title: "System Notification", message: "Your workout plan has changed."},
-        {id: 3, title: "System Notification", message: "Your diet plan has changed."},
+    const [notificationsList, setNotificationsList] = useState([
+        { id: 1, title: "Message from doctor", message: "try to avoid milk" },
+        { id: 2, title: "System Notification", message: "Your workout plan has changed." },
+        { id: 3, title: "System Notification", message: "Your diet plan has changed." },
     ]);
     return (
         <View style={styles.screen}>
             <View style={styles.headerContainer}>
                 <Text style={styles.headerText}>
-                Notifications
+                    Notifications
                 </Text>
                 <TouchableWithoutFeedback onPress={() => console.log("Fdv")}>
                     <Text style={{ fontFamily: 'open-sans', fontSize: 16 }}>
@@ -23,8 +23,8 @@ const NotificationsScreen = (props) => {
             {notificationsList.map((item) => {
                 return (
                     <View style={styles.itemContainer} key={item.id}>
-                        <Text>{item.title}</Text>
-                        <Text>{item.message}</Text>
+                        <Text style={styles.listItemTitleText}>{item.title}</Text>
+                        <Text style={styles.listItemMessageText}>{item.message}</Text>
                     </View>
                 );
             })}
@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
         borderColor: '#E5E5E5',
         borderBottomWidth: 1,
         padding: 15,
-        flexDirection: 'row',
     },
     headerContainer: {
         paddingLeft: 15,

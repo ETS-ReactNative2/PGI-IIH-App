@@ -5,8 +5,13 @@ import style from "react-native-datepicker/style";
 const HomePageScreen = (props) => {
     return (
         <View style={styles.screen}>
-            <Text>home page</Text>
-            <Button title="open drawer" onPress={() => props.navigation.openDrawer()}/>
+            <Button title="open drawer" onPress={() => props.navigation.openDrawer()} />
+            <Button title="Nutrition" onPress={() => props.navigation.navigate({
+                name: "Nutrition"
+            })} />
+            <Button title="Workout" onPress={() => props.navigation.navigate({
+                name: "WorkoutNavigator"
+            })} />
         </View>
     );
 };

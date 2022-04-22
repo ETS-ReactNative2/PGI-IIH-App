@@ -20,7 +20,9 @@ const store = createStore(rootReducer)
 const fetchFonts = () => {
   return Font.loadAsync({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
-    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+    'inter-regular': require('./assets/fonts/Inter-Regular.ttf'),
+    'inter-semibold': require('./assets/fonts/Inter-SemiBold.ttf'),
   });
 };
 
